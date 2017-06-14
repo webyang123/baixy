@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, width=640, user-scalable=no, maximum-scale=1.0, user-scalable=no"
+        name="viewport" >
+        <title></title>
+        <style media="screen">
+          *{
+            margin: 0;
+            padding: 0;
+          }
+
+          .box {
+            border: 1px solid red;
+            display: inline-block;
+            width: 200px;
+            margin-left: 300px;
+            margin-top: 100px;
+          }
+          ul {
+            list-style: none;
+          }
+          .box .top {
+            height: 30px;
+            line-height: 30px;
+            padding-left: 10px;
+            background: hotpink;
+          }
+          .box ul li {
+            line-height: 30px;
+            padding-left: 10px;
+          }
+          .fuhao {
+            font-size: 12px;
+            padding-left:85px;
+          }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+          <div class="top" onclick="showClose()">播放列表<span class="fuhao">可收起</span></div>
+          <ul class="list">
+            <li>列表1</li>
+            <li>列表2</li>
+            <li>列表3</li>
+            <li>列表4</li>
+            <li>列表5</li>
+          </ul>
+        </div>
+
+
+    </body>
+    <script type="text/javascript">
+    var  flag = true;
+    var list = document.querySelector(".list");
+    var fuhao = document.querySelector(".fuhao");
+    function showClose () {
+      if (flag) {
+        list.style.display = "none";
+        fuhao.innerText = "可展开";
+        flag = false;
+      } else {
+        list.style.display = "block";
+        fuhao.innerText = "可收起";
+        flag = true;
+      }
+    }
+
+    </script>
+</html>
